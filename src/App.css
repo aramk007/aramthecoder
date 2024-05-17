@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Sofia Sans", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.content-wrapper {
+  max-width: 1172px;
+  margin: auto;
+}

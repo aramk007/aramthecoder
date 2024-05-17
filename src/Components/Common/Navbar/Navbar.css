@@ -1,0 +1,29 @@
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.04), 0 -1px 0 0 rgba(0, 0, 0, 0.08);
+}
+.navLinks {
+  font-size: 20px;
+  color: #3c3c3c;
+  display: flex;
+  gap: 30px;
+  text-decoration: none;
+}
+.switch {
+  transform: scale(1.2);
+}
+.navItems {
+  text-decoration: none;
+  color: #5b6e80;
+  font-weight: 600;
+}
+
+.side-nav-container {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
