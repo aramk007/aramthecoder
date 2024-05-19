@@ -1,0 +1,104 @@
+@property --myColor1 {
+  syntax: "<color>";
+  initial-value: #1aa5ff;
+  inherits: false;
+}
+@property --myColor2 {
+  syntax: "<color>";
+  initial-value: #1a72ff;
+  inherits: false;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #5b6e80;
+}
+.hello {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 600;
+  color: #5b6e80;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.hero__left-side {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  width: 40%;
+}
+
+.emoji {
+  width: 40px;
+}
+
+.hero__left-side img,
+.hero__right-side img {
+  max-width: 100%;
+  height: auto;
+}
+
+.hero__content {
+  margin-top: 15px;
+}
+
+.fullStackWebDeveloper {
+  color: #00083d;
+  margin-bottom: 15px;
+}
+.hero-description-container {
+  /* padding-left: 10px; */
+}
+
+.btnViewWork {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+  padding: 30px 0px;
+}
+
+.viewWorkButton {
+  width: 167.61px;
+  height: 51.98px;
+  padding: 0px 15px;
+  border-radius: 30px;
+  border: none;
+  color: white;
+  font-size: 18px;
+  font-family: sofia-pro, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
+  font-optical-sizing: auto;
+  font-weight: 700;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.26);
+  background: linear-gradient(90deg, var(--myColor1), var(--myColor2));
+  transition: --myColor1 0.3s, --myColor2 0.3s;
+  cursor: pointer;
+}
+
+.viewWorkButton:hover {
+  --myColor2: #1aa5ff;
+  --myColor1: #1a72ff;
+}
+
+.aboutMe {
+  text-decoration: none;
+  color: rgb(0, 98, 255);
+  font-size: 18px;
+  font-weight: 700;
+  word-spacing: 2px;
+  transition: color 0.2s ease-in-out;
+}
+
+.aboutMe:hover {
+  color: rgb(66, 52, 255);
+}

@@ -12,12 +12,11 @@ export default function Navbar() {
         <img src={images.aramLogo} alt="logo" />
         <div className="side-nav-container">
           <div className="navLinks">
-            <Link className="navItems">Home</Link>
             <Link className="navItems">Projects</Link>
-            <Link className="navItems">Collaboration</Link>
-            <Link className="navItems">About</Link>
+            <Link className="navItems">Capabilities</Link>
+            <Link className="navItems">Contact</Link>
           </div>
-          <div>
+          <div className="switch">
             <Switch
               checked={checked}
               className="switch"
