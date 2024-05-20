@@ -1,0 +1,83 @@
+@property --myColor1 {
+  syntax: "<color>";
+  initial-value: #1aa5ff;
+  inherits: false;
+}
+@property --myColor2 {
+  syntax: "<color>";
+  initial-value: #1a72ff;
+  inherits: false;
+}
+.toggle-container {
+  width: 350px;
+
+  padding: 4px;
+  background-color: #00000012;
+  margin: auto;
+  display: flex;
+  border-radius: 50px;
+  overflow: hidden;
+  justify-content: space-between;
+}
+
+.toggler {
+  width: 100px;
+  height: 40px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 700;
+  color: #5b6e80;
+}
+
+.selected {
+  --myColor2: #1aa5ff;
+  --myColor1: #1a72ff;
+  background: linear-gradient(90deg, var(--myColor1), var(--myColor2));
+  transition: --myColor1 0.3s, --myColor2 0.3s;
+  color: white;
+}
+
+.skills-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.skills {
+  width: 110px;
+  height: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 2px 5px black;
+  border-radius: 5px;
+}
+
+.forThoseThatKnow {
+  font-size: 24px;
+  color: #5b6e80;
+  margin-bottom: 20px;
+  margin-top: 12px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.skillsAndToolsWords {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 36px;
+  color: #00083d;
+}
+
+.skillsWrapper {
+  border-top: 0.5px solid rgba(65, 62, 62, 0.11);
+  /* margin-top: 10px; */
+}

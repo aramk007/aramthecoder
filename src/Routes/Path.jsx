@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "../Components/Common/Navbar/Navbar";
 import Hero from "../Components/Common/Hero/Hero";
 import Footer from "../Components/Common/Footer/Footer";
+import Skills from "../Components/Skills/Skills";
 
 export default function Path() {
   return (
@@ -14,6 +15,7 @@ export default function Path() {
             <>
               <Navbar />
               <Hero />
+              <Skills />
               <Footer />
             </>
           }
