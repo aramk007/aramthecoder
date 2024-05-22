@@ -1,12 +1,48 @@
 * {
   margin: 0;
   padding: 0;
-}
-body {
-  font-family: "Sofia Sans", sans-serif;
-  font-optical-sizing: auto;
+  box-sizing: border-box;
 }
 
+/* :root {
+  --background-color: #ffffff;
+  --foreground-color: #003cff;
+  --primary-text-color: #0a0a0a;
+  --secondary-text-color: #ffffff;
+  --toggle-bg: #121212;
+  --toggle-fg: #ffd000;
+} */
+
+[data-theme="red"] {
+  --background-color: red;
+  --foreground-color: #003cff;
+  --primary-text-color: #0a0a0a;
+  --secondary-text-color: #ffffff;
+  --toggle-bg: #121212;
+  --toggle-fg: #ffd000;
+}
+
+[data-theme="dark"] {
+  --background-color: #121212;
+  --foreground-color: #567aff;
+  --primary-text-color: #f6f6f6;
+  --secondary-text-color: #0a0a0a;
+  --toggle-bg: #283452;
+  --toggle-fg: #00a6ff;
+}
+
+body {
+  font-family: sofia-pro, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
+  font-optical-sizing: auto;
+  background-color: var(--background-color);
+}
+
+.App {
+  background-color: var(--background-color);
+}
 .content-wrapper {
   max-width: 1172px;
   margin: auto;

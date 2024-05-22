@@ -1,0 +1,28 @@
+.footerContainer {
+  border-top: 1px solid rgba(54, 53, 53, 0.123);
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footerRight {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.terms,
+.aram {
+  color: #0062ff;
+}
+
+.footerRight a svg {
+  transition: fill 0.3s, stroke 0.3s; /* Smooth transition for fill and stroke */
+}
+
+.footerRight a:hover svg path,
+.footerRight a:hover svg rect,
+.footerRight a:hover svg line {
+  fill: #0062ff; /* Change fill color on hover */
+  stroke: #00083d; /* Change stroke color on hover */
+}
