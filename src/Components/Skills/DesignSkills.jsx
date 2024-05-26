@@ -1,4 +1,5 @@
 import React from "react";
+import { Icons } from "../../assets/Icons";
 
 export default function DesignSkills() {
   return (
@@ -16,6 +17,18 @@ export default function DesignSkills() {
           </g>
         </svg>
         <p>Design</p>
+      </div>
+      <div className="skills">
+        <img src={Icons.react} alt="" />
+        <p>Figma</p>
+      </div>
+      <div className="skills">
+        <img src={Icons.react} alt="" />
+        <p>Tailwind</p>
+      </div>
+      <div className="skills">
+        <img src={Icons.react} alt="" />
+        <p>Bootstrap</p>
       </div>
     </div>
   );

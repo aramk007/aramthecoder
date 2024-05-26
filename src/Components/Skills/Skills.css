@@ -13,7 +13,7 @@
 .toggle-container {
   width: 350px;
 
-  padding: 4px;
+  padding: 1px 10px 1px 1px;
   margin: auto;
 
   border-radius: 50px;
@@ -22,8 +22,7 @@
 .toggler {
   width: 100px;
   height: 40px;
-  padding-top: 8px;
-  padding-bottom: 8px;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,6 +45,8 @@
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
+  margin-left: 16%;
+  margin-right: 5%;
 }
 
 .skills {
@@ -64,26 +65,28 @@
 .forThoseThatKnow {
   font-size: 24px;
   color: var(--secondary-text-color);
-  margin-bottom: 20px;
-  margin-top: 12px;
+
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
+  padding-left: 25px;
 }
 
 .skillsAndToolsWords {
   text-align: center;
-  margin-top: 25px;
+  margin-top: 22px;
   font-size: 36px;
   color: var(--primary-text-color);
 }
 
 .skillsWrapper {
   border-top: 0.5px solid rgba(65, 62, 62, 0.11);
-  /* margin-top: 10px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
-/* Skills Slider CSS */
 /* Skills Slider CSS */
 
 .radio-block {
@@ -92,7 +95,7 @@
   min-width: 420px;
   border-radius: 30px;
   background-color: var(--slider-background);
-  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .selected {
@@ -110,7 +113,7 @@ label {
   position: relative;
   z-index: 100;
   width: 33.33%; /* Adjusted for three buttons */
-  padding: 18px !important;
+  padding: 13px 3px 13px 3px !important;
   transition: color 0.2s;
   text-align: center;
   cursor: pointer;
