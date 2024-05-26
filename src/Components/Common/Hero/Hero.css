@@ -44,12 +44,13 @@
 
 .hero__left-side img,
 .hero__right-side img {
-  max-width: 95%;
+  max-width: 100%;
   height: auto;
   object-fit: contain;
 }
 .hero__right-side {
   width: 45%;
+  /* margin-left: 15px; */
 }
 
 .hero__content {
