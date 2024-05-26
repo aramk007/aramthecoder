@@ -1,3 +1,5 @@
+@import url("../../App.css");
+
 @property --myColor1 {
   syntax: "<color>";
   initial-value: #1aa5ff;
@@ -29,7 +31,7 @@
   border-radius: 30px;
   cursor: pointer;
   font-weight: 700;
-  color: #5b6e80;
+  color: var(--secondary-text-color);
 }
 
 .selected {
@@ -55,11 +57,13 @@
   align-items: center;
   box-shadow: 1px 2px 5px black;
   border-radius: 5px;
+  background-color: var(--skills-inner);
+  color: var(--skills-text);
 }
 
 .forThoseThatKnow {
   font-size: 24px;
-  color: #5b6e80;
+  color: var(--secondary-text-color);
   margin-bottom: 20px;
   margin-top: 12px;
   margin-left: auto;
@@ -71,7 +75,7 @@
   text-align: center;
   margin-top: 25px;
   font-size: 36px;
-  color: #00083d;
+  color: var(--primary-text-color);
 }
 
 .skillsWrapper {
@@ -86,8 +90,8 @@
   position: relative;
   display: flex;
   min-width: 420px;
-  border-radius: 20px;
-  background-color: #f7f5f3;
+  border-radius: 30px;
+  background-color: var(--slider-background);
   margin-top: 10px;
 }
 
@@ -111,7 +115,7 @@ label {
   text-align: center;
   cursor: pointer;
   font-weight: 700;
-  color: rgba(65, 62, 62, 0.678);
+  color: var(--secondary-text-color);
 }
 
 input[type="radio"]:checked + label {

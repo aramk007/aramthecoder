@@ -9,7 +9,7 @@ export default function Footer() {
       </div>
       <div className="footerCenter">
         <p className="terms">Terms And Conditions</p>
-        <p>@2024 Aram Karapetyan</p>
+        <p className="copyright">@2024 Aram Karapetyan</p>
       </div>
       <div className="footerRight">
         {/* LinkedIn SVG */}
