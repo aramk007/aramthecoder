@@ -10,9 +10,11 @@ export default function Skills() {
   return (
     <div className="skillsWrapper">
       <h1 className="skillsAndToolsWords">Skills & Tools</h1>
-      <p className="forThoseThatKnow">
-        For those that know what to look for...
-      </p>
+      <div className="para-container">
+        <p className="forThoseThatKnow">
+          For those that know what to look for...
+        </p>
+      </div>
 
       <div className="toggle-container">
         <div className="radio-block">
