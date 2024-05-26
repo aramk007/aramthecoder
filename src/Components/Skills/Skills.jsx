@@ -28,21 +28,22 @@ export default function Skills() {
           <input
             type="radio"
             name="options"
+            id="option-three"
+            value="design"
+            checked={selected === "design"}
+            onChange={() => setSelected("design")}
+          />
+          <label htmlFor="option-three">Web Design</label>
+          <input
+            type="radio"
+            name="options"
             id="option-two"
             value="marketing"
             checked={selected === "marketing"}
             onChange={() => setSelected("marketing")}
           />
           <label htmlFor="option-two">Marketing</label>
-          <input
-            type="radio"
-            name="options"
-            id="option-three"
-            value="design"
-            checked={selected === "design"}
-            onChange={() => setSelected("design")}
-          />
-          <label htmlFor="option-three">Design</label>
+
           <span className="selected" aria-hidden="true"></span>
         </div>
       </div>
