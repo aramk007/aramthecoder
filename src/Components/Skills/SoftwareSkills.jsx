@@ -36,10 +36,6 @@ export default function SoftwareSkills() {
         <img src={Icons.react} alt="" />
         <p>Redux</p>
       </div>
-      <div className="skills">
-        <img src={Icons.react} alt="" />
-        <p>Git</p>
-      </div>
 
       <div className="skills">
         <img src={Icons.react} alt="" />
@@ -48,6 +44,30 @@ export default function SoftwareSkills() {
       <div className="skills">
         <img src={Icons.react} alt="" />
         <p>ExpressJs</p>
+      </div>
+      <div className="skills">
+        <img src={Icons.react} alt="" />
+        <p>Sass</p>
+      </div>
+      <div className="skills">
+        <img src={Icons.react} alt="" />
+        <p>Git</p>
+      </div>
+      <div className="skills">
+        <img src={Icons.react} alt="" />
+        <p>AWS</p>
+      </div>
+      <div className="skills">
+        <img src={Icons.react} alt="" />
+        <p>Vercel</p>
+      </div>
+      <div className="skills">
+        <img src={Icons.react} alt="" />
+        <p>Wordpress</p>
+      </div>
+      <div className="skills">
+        <img src={Icons.react} alt="" />
+        <p>E-Commerce</p>
       </div>
     </div>
   );
