@@ -1,3 +1,5 @@
+@import url("../../../App.css");
+
 @property --myColor1 {
   syntax: "<color>";
   initial-value: #1aa5ff;
@@ -16,14 +18,14 @@
   padding: 20px;
   font-size: 24px;
   font-weight: 600;
-  color: #5b6e80;
+  color: var(--secondary-text-color);
 }
 .hello {
   display: flex;
   align-items: center;
   font-size: 24px;
   font-weight: 600;
-  color: #5b6e80;
+  color: var(--secondary-text-color);
   gap: 10px;
   margin-bottom: 20px;
 }
@@ -50,7 +52,7 @@
 }
 
 .fullStackWebDeveloper {
-  color: #00083d;
+  color: var(--primary-text-color);
   margin-bottom: 15px;
 }
 .hero-description-container {

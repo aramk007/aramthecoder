@@ -1,3 +1,5 @@
+@import url("../../../App.css");
+
 .footerContainer {
   border-top: 1px solid rgba(54, 53, 53, 0.123);
   margin-top: 30px;
@@ -16,6 +18,10 @@
   color: #0062ff;
 }
 
+.copyright {
+  color: var(--secondary-text-color);
+}
+
 .footerRight a svg {
   transition: fill 0.3s, stroke 0.3s; /* Smooth transition for fill and stroke */
 }
@@ -25,4 +31,24 @@
 .footerRight a:hover svg line {
   fill: #0062ff; /* Change fill color on hover */
   stroke: #00083d; /* Change stroke color on hover */
+}
+
+.footerRight a:nth-child(1) svg path,
+.footerRight a:nth-child(1) svg rect,
+.footerRight a:nth-child(1) svg line {
+  fill: var(--footer-icons); /* Change fill color on hover */
+  stroke: #00083d; /* Change stroke color on hover */
+}
+
+.footerRight a:nth-child(2) svg path,
+.footerRight a:nth-child(2) svg rect,
+.footerRight a:nth-child(2) svg line {
+  fill: var(--footer-icons); /* Change fill color on hover */
+  stroke: #00083d; /* Change stroke color on hover */
+}
+
+.footerRight a:nth-child(3) svg path,
+.footerRight a:nth-child(3) svg rect,
+.footerRight a:nth-child(3) svg line {
+  stroke: var(--footer-icons); /* Change stroke color on hover */
 }
