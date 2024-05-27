@@ -8,6 +8,14 @@ export default function Capabilities() {
       <div className="Capabilities--Wrapper">
         <div className="Capabilities--Left--Container">
           <span className="headings">Web Design</span>
+          <p>Interface Design</p>
+          <p>Aesthetic Design</p>
+          <p>Brand Identities</p>
+          <p>Design Frameworks</p>
+          <p>Responsive Design</p>
+          <p>Mobile-Friendly Websites</p>
+          <p>Modular Layout Systems</p>
+          <p>Brand Standards</p>
         </div>
         <div className="Capabilities--Center--Container">
           <span className="headings">Web Development</span>
