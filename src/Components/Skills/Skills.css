@@ -108,7 +108,7 @@
   position: absolute;
   top: 1px;
   left: 1px;
-  width: calc(33.33% - 1px); /* Adjusted for three buttons */
+  width: calc(33.33% - 1px);
   height: calc(100% - 2px);
   border-radius: 100px;
   transition: transform 0.2s;
