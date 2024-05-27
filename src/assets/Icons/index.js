@@ -44,3 +44,5 @@ export const marketingIcons = {
   automation: "./src/assets/Icons/Photoshop.svg",
   emailSMS: "./src/assets/Icons/Canva.svg",
 };
+
+// Capability Icons
