@@ -1,6 +1,7 @@
 import React from "react";
 import { images } from "../../../assets/Images";
 import "./Hero.css";
+import { Link } from "react-router-dom";
 export default function Hero() {
   return (
     <>
@@ -28,9 +29,9 @@ export default function Hero() {
               </div>
               <div className="btnViewWork">
                 <button className="viewWorkButton">View My Work</button>
-                <a className="aboutMe" href="#">
+                <Link className="aboutMe" to="/">
                   More About Me
-                </a>
+                </Link>
               </div>
             </div>
 

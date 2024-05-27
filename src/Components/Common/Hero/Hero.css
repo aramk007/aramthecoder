@@ -102,3 +102,27 @@
 .aboutMe:hover {
   color: rgb(66, 52, 255);
 }
+
+@media screen and (max-width: 440px) {
+  .hero__right-side {
+    display: none;
+  }
+
+  .hero__left-side {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hello {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .aboutMe {
+    font-size: 18px;
+  }
+
+  .btnViewWork {
+    flex-direction: column;
+  }
+}
