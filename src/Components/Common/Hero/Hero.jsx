@@ -1,8 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { images } from "../../../assets/Images";
 import "./Hero.css";
 import { Link } from "react-router-dom";
 export default function Hero() {
+  const [isDark, setIsDark] = useState(
+    JSON.parse(localStorage.getItem("isDark"))
+  );
+
+  useEffect(() => {
+    const handleStorageChange = () => {
+      setIsDark(JSON.parse(localStorage.getItem("isDark")));
+    };
+
+    window.addEventListener("storage", handleStorageChange);
+
+    return () => {
+      window.removeEventListener("storage", handleStorageChange);
+    };
+  }, []);
+
   return (
     <>
       <section>
@@ -19,7 +35,7 @@ export default function Hero() {
               </div>
               <h1 className="fullStackWebDeveloper">
                 Full Stack Web Developer
-              </h1>{" "}
+              </h1>
               <div className="hero-description-container">
                 <p>
                   I create user-centric web & Mobile applications that drive
@@ -37,7 +53,7 @@ export default function Hero() {
 
             <div className="hero__right-side">
               <img
-                src={images.aramLightMode}
+                src={!isDark ? images.aramLightMode : images.aramDarkImage}
                 alt="Aram Karapetyan Web Developer"
               />
             </div>

@@ -4,7 +4,9 @@ import { Link } from "react-router-dom";
 import Switch from "react-switch";
 import { Icons } from "../../../assets/Icons";
 import "./Navbar.css";
-export default function Navbar() {
+// isDark prop is being imported from app.jsx for the toggle button / localStorage.
+// setIsDark will accept the dark/light theme state and send it back to app.jsx
+export default function Navbar({ isDark, toggleTheme }) {
   const [checked, setChecked] = useState(false);
   return (
     <>
@@ -18,7 +20,7 @@ export default function Navbar() {
           </div>
           <div className="switch">
             <Switch
-              checked={checked}
+              checked={isDark}
               className="switch"
               checkedHandleIcon={
                 <>
@@ -52,7 +54,7 @@ export default function Navbar() {
                   </div>
                 </>
               }
-              onChange={() => setChecked(!checked)}
+              onChange={toggleTheme}
             />
           </div>
         </div>
