@@ -17,8 +17,8 @@ export default function Cta() {
       </div>
 
       <div className="cta-right">
-        <p>+316 57 041 097</p>
-        <p>hi@rubenkuipers.design</p>
+        <p>+1310 424 8341</p>
+        <p>aramk007@gmail.com</p>
       </div>
     </div>
   );
