@@ -1,0 +1,142 @@
+/* Import base styles */
+@import url("../../App.css");
+
+/* Define custom properties for colors */
+@property --myColor1 {
+  syntax: "<color>";
+  initial-value: #1aa5ff;
+  inherits: false;
+}
+@property --myColor2 {
+  syntax: "<color>";
+  initial-value: #1a72ff;
+  inherits: false;
+}
+
+/* Styles for project buttons */
+.project-button button {
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.26); /* Button shadow */
+  background: linear-gradient(
+    90deg,
+    var(--myColor1),
+    var(--myColor2)
+  ); /* Gradient background */
+  transition: --myColor1 0.3s, --myColor2 0.3s; /* Smooth transition for color change */
+  cursor: pointer; /* Pointer cursor on hover */
+  border: none; /* Remove default border */
+  width: 32px; /* Button width */
+  height: 32px; /* Button height */
+  display: flex; /* Flexbox for centering content */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  border-radius: 12px; /* Rounded corners */
+}
+
+/* Hover effect for project buttons */
+.project-button button:hover {
+  --myColor2: #1aa5ff; /* Change gradient colors on hover */
+  --myColor1: #1a72ff;
+}
+
+/* Container for project buttons and text */
+.project-button {
+  display: flex; /* Flexbox for layout */
+  align-items: center; /* Align items vertically centered */
+  gap: 10px; /* Space between elements */
+}
+
+/* Styles for project name text */
+.project-button p {
+  font-weight: 600; /* Bold text */
+  color: var(--secondary-text-color); /* Secondary text color */
+}
+
+/* Initial state of the projects-wrapper, hidden and slightly down */
+.projects-wrapper {
+  padding: 70px 0px; /* Padding around the section */
+  opacity: 0; /* Initially hidden */
+  transform: translateY(20px) scale(0.95); /* Initially positioned slightly down and scaled down */
+  transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition */
+}
+
+/* Animate class to be added when the element is in view */
+.projects-wrapper.animate {
+  opacity: 1; /* Fade in */
+  transform: translateY(0) scale(1); /* Move to original position and scale to normal size */
+}
+
+/* Flexbox layout for project rows */
+.project-top {
+  display: flex; /* Flexbox for layout */
+  justify-content: space-between; /* Space between projects */
+  width: 85%; /* Width of the row */
+  margin: auto; /* Center the row */
+}
+
+/* Container for each project item */
+.project-item {
+  position: relative; /* Position relative to contain overlay */
+  transition: box-shadow 0.3s ease-in-out; /* Smooth transition for box shadow */
+}
+
+/* Container for project image and overlay */
+.project-image-container {
+  position: relative; /* Position relative to contain overlay */
+}
+
+/* Styles for project images */
+.project-images {
+  width: 450px; /* Image width */
+  /* Removed the transform and transition properties for scaling */
+}
+
+/* Hover effect for project items */
+.project-item:hover .project-images {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Add box shadow */
+}
+
+/* Overlay that appears on hover */
+.project-overlay {
+  position: absolute; /* Position overlay absolutely within the project item */
+  top: 0; /* Position at the top */
+  left: 0; /* Position at the left */
+  width: 100%; /* Set width to 100% */
+  height: 100%; /* Set height to 100% */
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  opacity: 0; /* Initially hidden */
+  display: flex; /* Flexbox for centering content */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  transition: opacity 0.3s ease-in-out; /* Smooth transition for opacity */
+}
+
+/* Show overlay on hover */
+.project-item:hover .project-overlay {
+  opacity: 1; /* Show the overlay */
+}
+
+/* Content within the overlay */
+.overlay-content {
+  text-align: center; /* Center text */
+  color: white; /* White text color */
+  padding: 20px; /* Add padding around the content */
+  cursor: pointer;
+}
+
+.overlay-content p {
+  font-size: 24px; /* Larger font size for "Explore" text */
+  font-weight: bold; /* Bold text */
+  margin-top: 10px; /* Margin above the text */
+}
+
+/* Spacer to create vertical space */
+.spacer {
+  height: 70px; /* Height of the spacer */
+}
+
+/* Styles for the heading */
+.projects-heading {
+  text-align: center; /* Center the heading */
+  color: var(--primary-text-color); /* Primary text color */
+  font-size: 40px; /* Font size */
+}

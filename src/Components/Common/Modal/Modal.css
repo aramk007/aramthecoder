@@ -1,0 +1,128 @@
+.modal-overlay {
+  background-color: rgba(
+    51,
+    51,
+    51,
+    0.42
+  ); /* Semi-transparent black for dimming background */
+  position: fixed; /* Fixed position to cover the entire screen */
+  top: 0; /* Position at the top */
+  left: 0; /* Position at the left */
+  right: 0; /* Position at the right */
+  bottom: 0; /* Position at the bottom */
+  display: flex; /* Use flexbox for centering content */
+  align-items: center; /* Vertically center content */
+  justify-content: center; /* Horizontally center content */
+}
+
+.modal-content {
+  background-color: #ffffffef; /* Background color for the modal content */
+  padding: 20px; /* Padding inside the modal content */
+  border-radius: 8px; /* Rounded corners for the modal content */
+  position: relative; /* Position relative to allow positioning of child elements */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Arrange children in a column */
+  justify-content: space-between; /* Space out children with space between */
+  height: 100%; /* Make content height 100% of the container */
+}
+
+.modal-container {
+  width: 65vw; /* Width of the modal container (65% of viewport width) */
+  height: 70vh; /* Height of the modal container (70% of viewport height) */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Arrange children in a column */
+  justify-content: space-between; /* Space out children with space between */
+}
+
+.close-button {
+  position: absolute; /* Position the button absolutely within the modal content */
+  top: 10px; /* Position 10px from the top */
+  right: 10px; /* Position 10px from the right */
+  background: linear-gradient(
+    90deg,
+    var(--myColor1),
+    var(--myColor2)
+  ); /* Gradient background */
+  border: none; /* Remove default border */
+  color: white; /* White text color */
+  font-size: 1.5rem; /* Large font size */
+  padding: 5px 10px; /* Padding inside the button */
+  border-radius: 5px; /* Rounded corners for the button */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.close-button:hover {
+  background: linear-gradient(
+    90deg,
+    var(--myColor2),
+    var(--myColor1)
+  ); /* Gradient background on hover */
+}
+
+.video-placeholder {
+  width: 100%; /* Full width of the container */
+  height: calc(
+    100% - 130px
+  ); /* Height minus space for controls and other content */
+  margin-top: 20px; /* Margin at the top */
+  background: #000; /* Black background */
+  position: relative; /* Position relative to allow positioning of child elements */
+}
+
+.video-controls {
+  position: absolute; /* Position controls absolutely within the video placeholder */
+  bottom: 10px; /* Position 10px from the bottom */
+  left: 10px; /* Position 10px from the left */
+  right: 10px; /* Position 10px from the right */
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Align items vertically centered */
+  justify-content: space-between; /* Space out children with space between */
+}
+
+.play-pause-button {
+  background: #fff; /* White background */
+  border: none; /* Remove default border */
+  padding: 10px; /* Padding inside the button */
+  border-radius: 5px; /* Rounded corners for the button */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.progress-bar {
+  flex-grow: 1; /* Allow the progress bar to grow and fill available space */
+  margin: 0 10px; /* Margin on the left and right */
+}
+
+.time-display {
+  color: #fff; /* White text color */
+}
+
+.button-group {
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center the buttons horizontally */
+  gap: 20px; /* Space between the buttons */
+  margin-top: 20px; /* Margin at the top */
+  padding-bottom: 20px; /* Add padding to prevent overflow */
+}
+
+.action-button {
+  background: linear-gradient(
+    90deg,
+    var(--myColor1),
+    var(--myColor2)
+  ); /* Gradient background */
+  border: none; /* Remove default border */
+  color: white; /* White text color */
+  padding: 10px 20px; /* Padding inside the button */
+  border-radius: 5px; /* Rounded corners for the button */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 1rem; /* Font size */
+  flex-shrink: 0; /* Prevent the button from shrinking */
+}
+
+.action-button:hover {
+  background: linear-gradient(
+    90deg,
+    var(--myColor2),
+    var(--myColor1)
+  ); /* Gradient background on hover */
+}

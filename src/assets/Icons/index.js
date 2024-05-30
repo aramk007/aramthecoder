@@ -46,3 +46,7 @@ export const marketingIcons = {
 };
 
 // Capability Icons
+
+export const projectIcons = {
+  arrow_right: "./src/assets/Icons/arrow-right.png",
+};

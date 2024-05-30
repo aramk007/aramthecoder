@@ -6,6 +6,7 @@ import Footer from "../Components/Common/Footer/Footer";
 import Skills from "../Components/Skills/Skills";
 import Cta from "../Components/CTA/Cta";
 import Capabilities from "../Components/Capabilities/Capabilities";
+import Projects from "../Components/Projects/Projects";
 // doing prop drilling to bring toggle props from app.jsx to path, then to navbar
 export default function Path({ isDark, toggleTheme }) {
   return (
@@ -17,6 +18,7 @@ export default function Path({ isDark, toggleTheme }) {
             <>
               <Navbar isDark={isDark} toggleTheme={toggleTheme} />
               <Hero />
+              <Projects />
               <Skills />
               <Capabilities />
               <Cta />
