@@ -1,6 +1,7 @@
 /* Import base styles */
 @import url("../../../App.css");
 
+/* Smooth Scrolling */
 html {
   scroll-behavior: smooth;
 }
@@ -148,15 +149,15 @@ html {
 /* Animation for navigation items */
 .fadeIn {
   opacity: 0;
-  animation: fadeIn 0.3s ease-in-out forwards;
+  animation: fadeIn 0.5s ease-in-out forwards;
 }
 
 .fadeIn:nth-child(1) {
-  animation-delay: 0.4s;
+  animation-delay: 0.2s;
 }
 
 .fadeIn:nth-child(2) {
-  animation-delay: 0.5s;
+  animation-delay: 0.4s;
 }
 
 .fadeIn:nth-child(3) {
@@ -164,7 +165,7 @@ html {
 }
 
 .fadeIn:nth-child(4) {
-  animation-delay: 0.7s;
+  animation-delay: 0.8s;
 }
 
 /* Keyframes for fading in elements */
