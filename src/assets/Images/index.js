@@ -1,5 +1,3 @@
-// src/assets/images/index.js
-
 export const images = {
   aramLogo: new URL("./aramLogo.png", import.meta.url).href,
   aramLightMode: new URL("./Aram-Light-Mode-Shadow-Pic.png", import.meta.url)
