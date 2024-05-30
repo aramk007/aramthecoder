@@ -1,3 +1,4 @@
+/* Modal overlay styling */
 .modal-overlay {
   background-color: rgba(
     51,
@@ -15,6 +16,7 @@
   justify-content: center; /* Horizontally center content */
 }
 
+/* Modal content styling */
 .modal-content {
   background-color: #ffffffef; /* Background color for the modal content */
   padding: 20px; /* Padding inside the modal content */
@@ -26,14 +28,16 @@
   height: 100%; /* Make content height 100% of the container */
 }
 
+/* Modal container styling */
 .modal-container {
-  width: 65vw; /* Width of the modal container (65% of viewport width) */
+  width: 60vw; /* Width of the modal container (65% of viewport width) */
   height: 70vh; /* Height of the modal container (70% of viewport height) */
   display: flex; /* Use flexbox for layout */
   flex-direction: column; /* Arrange children in a column */
   justify-content: space-between; /* Space out children with space between */
 }
 
+/* Close button styling */
 .close-button {
   position: absolute; /* Position the button absolutely within the modal content */
   top: 10px; /* Position 10px from the top */
@@ -59,16 +63,16 @@
   ); /* Gradient background on hover */
 }
 
+/* Video placeholder styling */
 .video-placeholder {
   width: 100%; /* Full width of the container */
-  height: calc(
-    100% - 130px
-  ); /* Height minus space for controls and other content */
-  margin-top: 20px; /* Margin at the top */
+  flex: 1; /* Allow the video to take up remaining space */
+  margin-top: 15px; /* Margin at the top */
   background: #000; /* Black background */
   position: relative; /* Position relative to allow positioning of child elements */
 }
 
+/* Video controls styling */
 .video-controls {
   position: absolute; /* Position controls absolutely within the video placeholder */
   bottom: 10px; /* Position 10px from the bottom */
@@ -79,6 +83,7 @@
   justify-content: space-between; /* Space out children with space between */
 }
 
+/* Play/pause button styling */
 .play-pause-button {
   background: #fff; /* White background */
   border: none; /* Remove default border */
@@ -87,15 +92,18 @@
   cursor: pointer; /* Pointer cursor on hover */
 }
 
+/* Progress bar styling */
 .progress-bar {
   flex-grow: 1; /* Allow the progress bar to grow and fill available space */
   margin: 0 10px; /* Margin on the left and right */
 }
 
+/* Time display styling */
 .time-display {
   color: #fff; /* White text color */
 }
 
+/* Button group styling */
 .button-group {
   display: flex; /* Use flexbox for layout */
   justify-content: center; /* Center the buttons horizontally */
@@ -104,6 +112,7 @@
   padding-bottom: 20px; /* Add padding to prevent overflow */
 }
 
+/* Action button styling */
 .action-button {
   background: linear-gradient(
     90deg,
