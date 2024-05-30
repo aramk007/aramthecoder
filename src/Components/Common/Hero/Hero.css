@@ -1,3 +1,5 @@
+@import url("../../../App.css");
+
 @property --myColor1 {
   syntax: "<color>";
   initial-value: #1aa5ff;
@@ -16,16 +18,17 @@
   padding: 20px;
   font-size: 24px;
   font-weight: 600;
-  color: #5b6e80;
+  color: var(--secondary-text-color);
+  height: 87.3vh;
 }
 .hello {
   display: flex;
   align-items: center;
   font-size: 24px;
   font-weight: 600;
-  color: #5b6e80;
+  color: var(--secondary-text-color);
   gap: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .hero__left-side {
@@ -33,6 +36,7 @@
   flex-direction: column;
   /* align-items: center; */
   width: 40%;
+  margin-left: 10px;
 }
 
 .emoji {
@@ -43,6 +47,11 @@
 .hero__right-side img {
   max-width: 100%;
   height: auto;
+  object-fit: contain;
+}
+.hero__right-side {
+  width: 45%;
+  /* margin-left: 15px; */
 }
 
 .hero__content {
@@ -50,11 +59,9 @@
 }
 
 .fullStackWebDeveloper {
-  color: #00083d;
+  color: var(--primary-text-color);
   margin-bottom: 15px;
-}
-.hero-description-container {
-  /* padding-left: 10px; */
+  text-align: left;
 }
 
 .btnViewWork {
@@ -101,4 +108,32 @@
 
 .aboutMe:hover {
   color: rgb(66, 52, 255);
+}
+
+@media screen and (max-width: 440px) {
+  .hero__right-side {
+    display: none;
+  }
+
+  .hero__left-side {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hello {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .aboutMe {
+    font-size: 18px;
+  }
+
+  .btnViewWork {
+    flex-direction: column;
+  }
+
+  .fullStackWebDeveloper {
+    text-align: center;
+  }
 }
