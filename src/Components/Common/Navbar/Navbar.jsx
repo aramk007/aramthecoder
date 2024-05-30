@@ -14,7 +14,9 @@ export default function Navbar({ isDark, toggleTheme }) {
         <img src={images.aramLogo} alt="logo" />
         <div className="side-nav-container">
           <div className="navLinks">
-            <Link className="navItems">Projects</Link>
+            <a href="#projects" className="navItems">
+              Projects
+            </a>
             <Link className="navItems">Capabilities</Link>
             <Link className="navItems">Contact</Link>
           </div>
