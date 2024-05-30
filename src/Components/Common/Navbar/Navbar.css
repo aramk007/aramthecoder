@@ -1,7 +1,11 @@
+/* Import base styles */
+@import url("../../../App.css");
+
 html {
   scroll-behavior: smooth;
 }
-@import url("../../App.css");
+
+/* Define custom properties for colors */
 @property --myColor1 {
   syntax: "<color>";
   initial-value: #1aa5ff;
@@ -13,14 +17,19 @@ html {
   inherits: false;
 }
 
+/* Navbar styling */
 .navBar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.04), 0 -1px 0 0 rgba(0, 0, 0, 0.08);
+  position: relative;
+  z-index: 2;
+  background-color: var(--background-color);
 }
+
+/* Navigation links for larger screens */
 .navLinks {
   font-size: 21px;
   color: #5b6e80;
@@ -28,16 +37,17 @@ html {
   gap: 40px;
   text-decoration: none;
 }
-.switch {
-  transform: scale(1.2);
-}
+
+/* Navigation items styling */
 .navItems {
   text-decoration: none;
   color: #5b6e80;
   font-weight: 600;
 }
 
+/* Switch styling */
 .switch {
+  transform: scale(1.2);
   padding-left: 10px;
 }
 
@@ -46,23 +56,30 @@ html {
   gap: 30px;
   align-items: center;
 }
+
+/* Hamburger icon for mobile view */
 .hamburger-icon {
   display: none;
 }
 
+/* Hamburger menu styling */
 .hamburger-menu {
-  position: absolute;
-  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  transform: translateY(-100%);
+  transition: transform 0.5s ease-in-out;
+  z-index: 1;
 }
 
-.hide {
-  display: none;
+.hamburger-menu.show {
+  transform: translateY(0);
 }
 
-.show {
-  display: block;
-}
-
+/* Styling for the button inside the hamburger menu */
 .viewWorkButton {
   width: 167.61px;
   height: 51.98px;
@@ -88,6 +105,7 @@ html {
   --myColor1: #1a72ff;
 }
 
+/* Pulsating dot in the nav footer */
 .pulse {
   background-color: #0062ff;
   display: inline-block;
@@ -114,6 +132,7 @@ html {
   }
 }
 
+/* Nav footer styling */
 .nav-footer {
   height: 80px;
   background-color: rgb(221, 221, 221);
@@ -121,16 +140,46 @@ html {
   justify-content: flex-end;
   align-items: center;
   position: absolute;
-  bottom: 0%;
-  width: 100vw;
+  bottom: 0;
+  width: 100%;
   padding-right: 20px;
 }
 
-.nav-footer p {
-  color: rgba(0, 98, 255);
-  font-weight: 500;
-  font-size: 16px;
+/* Animation for navigation items */
+.fadeIn {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards;
 }
+
+.fadeIn:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.fadeIn:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.fadeIn:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.fadeIn:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+/* Keyframes for fading in elements */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media queries for mobile screens */
 @media screen and (max-width: 450px) {
   .hamburger-icon {
     display: block;
@@ -141,18 +190,13 @@ html {
     display: none;
   }
 
-  .hamburger-menu {
-    background-color: white;
-    height: 80vh;
-    padding-bottom: 20px;
-  }
-
   .navLinks-responsive {
     display: flex;
     flex-direction: column;
     gap: 30px;
     justify-content: center;
     align-items: center;
+    margin-top: 100px; /* Ensure links are not hidden under the nav bar */
   }
 
   .navItems {
@@ -163,5 +207,13 @@ html {
     margin-top: 18px;
     text-align: center;
     padding-left: 0px;
+  }
+
+  .hamburger-menu {
+    height: 90vh; /* Adjusted height to keep footer visible */
+  }
+
+  .nav-footer {
+    height: 10vh; /* Ensure footer takes the remaining space */
   }
 }
