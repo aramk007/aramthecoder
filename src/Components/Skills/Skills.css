@@ -207,23 +207,23 @@ input[type="radio"] {
 /* Fade-in effect for entering elements */
 .fade-enter {
   opacity: 0;
-  transform: scale(0.95); /* Slightly scale down */
+  transform: scale(0.15); /* Slightly scale down */
 }
 
 .fade-enter-active {
   opacity: 1;
-  transform: scale(1); /* Scale back to normal */
+  transform: scale(1.05); /* Scale back to normal */
   transition: opacity 500ms, transform 500ms;
 }
 
 /* Fade-out effect for exiting elements */
 .fade-exit {
   opacity: 1;
-  transform: scale(1); /* Normal scale */
+  transform: scale(1.05); /* Normal scale */
 }
 
 .fade-exit-active {
   opacity: 0;
-  transform: scale(0.95); /* Slightly scale down */
-  transition: opacity 500ms, transform 500ms;
+  transform: scale(0.55); /* Slightly scale down */
+  transition: opacity 900ms, transform 900ms;
 }
