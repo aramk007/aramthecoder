@@ -49,3 +49,8 @@ export const marketingIcons = {
 export const projectIcons = {
   arrow_right: new URL("./arrow-right.png", import.meta.url).href,
 };
+
+export const navbarIcons = {
+  menu: new URL("./menu.svg", import.meta.url).href,
+  close: new URL("./hamburger-close.png", import.meta.url).href,
+};

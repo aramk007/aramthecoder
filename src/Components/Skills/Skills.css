@@ -227,3 +227,37 @@ input[type="radio"] {
   transform: scale(0.55); /* Slightly scale down */
   transition: opacity 900ms, transform 900ms;
 }
+
+@media screen and (max-width: 430px) {
+  .toggle-container {
+    transform: scale(0.8);
+    margin-left: 10px;
+  }
+
+  .forThoseThatKnow {
+    margin-left: 0px;
+    font-size: 19px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .toggle-container {
+    transform: scale(0.8);
+    margin-left: -10px;
+  }
+
+  .forThoseThatKnow {
+    margin-left: 0px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .toggle-container {
+    transform: scale(0.8);
+    margin-left: -15px;
+  }
+
+  .forThoseThatKnow {
+    margin-left: 0px;
+  }
+}
