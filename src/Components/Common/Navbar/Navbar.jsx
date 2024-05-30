@@ -22,9 +22,18 @@ export default function Navbar({ isDark, toggleTheme }) {
       });
   };
 
-  // Function to close the menu when an item is clicked
-  const closeMenu = () => {
-    setSelected(false);
+  // Function to close the menu when an item is clicked with a delay
+  const closeMenuWithDelay = (event) => {
+    event.preventDefault();
+    const href = event.currentTarget.getAttribute("href");
+    setTimeout(() => {
+      setSelected(false);
+      if (href.startsWith("#")) {
+        document.querySelector(href).scrollIntoView({ behavior: "smooth" });
+      } else {
+        window.location.href = href;
+      }
+    }, 300); // Adjust delay as needed
   };
 
   return (
@@ -92,20 +101,31 @@ export default function Navbar({ isDark, toggleTheme }) {
       {/* Hamburger menu content */}
       <div className={`hamburger-menu ${selected ? "show" : "hide"}`}>
         <div className="navLinks-responsive">
-          <a href="#projects" className="navItems fadeIn" onClick={closeMenu}>
+          <a
+            href="#projects"
+            className="navItems fadeIn"
+            onClick={closeMenuWithDelay}
+          >
             Projects
           </a>
           <Link
             to="/capabilities"
             className="navItems fadeIn"
-            onClick={closeMenu}
+            onClick={closeMenuWithDelay}
           >
             Capabilities
           </Link>
-          <Link to="/contact" className="navItems fadeIn" onClick={closeMenu}>
+          <Link
+            to="/contact"
+            className="navItems fadeIn"
+            onClick={closeMenuWithDelay}
+          >
             Contact
           </Link>
-          <button className="viewWorkButton fadeIn" onClick={closeMenu}>
+          <button
+            className="viewWorkButton fadeIn"
+            onClick={closeMenuWithDelay}
+          >
             Contact Me
           </button>
         </div>
