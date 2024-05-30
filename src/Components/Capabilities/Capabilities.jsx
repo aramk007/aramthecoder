@@ -3,7 +3,7 @@ import "./Capabilities.css";
 
 export default function Capabilities() {
   return (
-    <div className="wrapper">
+    <div id="capabilities" className="wrapper">
       <h1>Capabilities</h1>
       <div className="Capabilities--Wrapper">
         <div className="Capabilities--Left--Container">
