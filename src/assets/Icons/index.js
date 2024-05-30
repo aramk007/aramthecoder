@@ -8,10 +8,10 @@ export const Icons = {
   nodeJs: new URL("./nodejs.svg", import.meta.url).href,
   nextJs: new URL("./nextJs.svg", import.meta.url).href,
   jsxIcon: new URL("./jsx_icon.svg", import.meta.url).href,
-  mongoose: new URL("./mongooseJs.svg", import.meta.url).href,
-  mongodb: new URL("./mongoDB.svg", import.meta.url).href,
+  mongoose: new URL("./MongooseJs.svg", import.meta.url).href,
+  mongodb: new URL("./MongoDB.svg", import.meta.url).href,
   redux: new URL("./Redux.svg", import.meta.url).href,
-  gatsby: new URL("./gatsby.svg", import.meta.url).href,
+  gatsby: new URL("./Gatsby.svg", import.meta.url).href,
   express: new URL("./expressJs.svg", import.meta.url).href,
   sass: new URL("./sass.svg", import.meta.url).href,
   git: new URL("./Git.svg", import.meta.url).href,
@@ -30,7 +30,7 @@ export const designIcons = {
   photoshop: new URL("./Photoshop.svg", import.meta.url).href,
   canva: new URL("./Canva.svg", import.meta.url).href,
   userJourney: new URL("./journey.png", import.meta.url).href,
-  wordpress: new URL("./Wordpress.svg", import.meta.url).href,
+  wordpress: new URL("./WordPress.svg", import.meta.url).href,
   ecommerce: new URL("./WooCommerce.svg", import.meta.url).href,
 };
 
