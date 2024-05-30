@@ -108,13 +108,13 @@ export default function Navbar({ isDark, toggleTheme }) {
           >
             Projects
           </a>
-          <Link
-            to="/capabilities"
+          <a
+            to="#capabilities"
             className="navItems fadeIn"
             onClick={closeMenuWithDelay}
           >
             Capabilities
-          </Link>
+          </a>
           <Link
             to="/contact"
             className="navItems fadeIn"
