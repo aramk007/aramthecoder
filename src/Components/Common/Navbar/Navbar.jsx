@@ -22,6 +22,11 @@ export default function Navbar({ isDark, toggleTheme }) {
       });
   };
 
+  // Function to close the menu when an item is clicked
+  const closeMenu = () => {
+    setSelected(false);
+  };
+
   return (
     <>
       <nav className="navBar">
@@ -87,16 +92,22 @@ export default function Navbar({ isDark, toggleTheme }) {
       {/* Hamburger menu content */}
       <div className={`hamburger-menu ${selected ? "show" : "hide"}`}>
         <div className="navLinks-responsive">
-          <a href="#projects" className="navItems fadeIn">
+          <a href="#projects" className="navItems fadeIn" onClick={closeMenu}>
             Projects
           </a>
-          <Link to="/capabilities" className="navItems fadeIn">
+          <Link
+            to="/capabilities"
+            className="navItems fadeIn"
+            onClick={closeMenu}
+          >
             Capabilities
           </Link>
-          <Link to="/contact" className="navItems fadeIn">
+          <Link to="/contact" className="navItems fadeIn" onClick={closeMenu}>
             Contact
           </Link>
-          <button className="viewWorkButton fadeIn">Contact Me</button>
+          <button className="viewWorkButton fadeIn" onClick={closeMenu}>
+            Contact Me
+          </button>
         </div>
         <div className="switch fadeIn">
           <Switch
