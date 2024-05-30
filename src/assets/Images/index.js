@@ -1,10 +1,11 @@
 export const images = {
-  aramLogo: "./src/assets/Images/aramLogo.png",
-  aramLightMode: "./src/assets/Images/Aram-Light-Mode-Shadow-Pic.png",
-  handEmoji: "./src/assets/Images/handEmoji.png",
-  aramDarkImage: "./src/assets/Images/Aram-dark-image.png",
-  cateringsList: "./src/assets/Images/portfolio-cateringslist.png",
-  dealership: "./src/assets/Images/portfolio-dealership.png",
-  kitchen: "./src/assets/Images/portfolio-kitchen.png",
-  restraunts: "./src/assets/Images/portfolio-restaurant.png",
+  aramLogo: new URL("./aramLogo.png", import.meta.url).href,
+  aramLightMode: new URL("./Aram-Light-Mode-Shadow-Pic.png", import.meta.url)
+    .href,
+  handEmoji: new URL("./handEmoji.png", import.meta.url).href,
+  aramDarkImage: new URL("./Aram-dark-image.png", import.meta.url).href,
+  cateringsList: new URL("./portfolio-cateringslist.png", import.meta.url).href,
+  dealership: new URL("./portfolio-dealership.png", import.meta.url).href,
+  kitchen: new URL("./portfolio-kitchen.png", import.meta.url).href,
+  restraunts: new URL("./portfolio-restaurant.png", import.meta.url).href,
 };
