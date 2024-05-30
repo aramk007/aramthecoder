@@ -77,6 +77,24 @@
 .project-item {
   position: relative; /* Position relative to contain overlay */
   transition: box-shadow 0.3s ease-in-out; /* Smooth transition for box shadow */
+  display: flex; /* Flexbox for layout */
+  flex-direction: column; /* Arrange children in a column */
+  align-items: center; /* Center children horizontally */
+  text-align: center; /* Center text */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 985px) {
+  .project-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%; /* Full width for smaller screens */
+  }
+  .project-item {
+    width: 100%; /* Full width for smaller screens */
+    margin: 30px 0; /* Margin at the top and bottom */
+  }
 }
 
 /* Container for project image and overlay */
@@ -86,8 +104,9 @@
 
 /* Styles for project images */
 .project-images {
-  width: 450px; /* Image width */
-  /* Removed the transform and transition properties for scaling */
+  width: 100%; /* Full width of the container */
+  max-width: 450px; /* Maximum width for the image */
+  height: auto; /* Maintain aspect ratio */
 }
 
 /* Hover effect for project items */
