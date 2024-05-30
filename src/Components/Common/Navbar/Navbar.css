@@ -1,6 +1,10 @@
 /* Import base styles */
 @import url("../../../App.css");
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Define custom properties for colors */
 @property --myColor1 {
   syntax: "<color>";
