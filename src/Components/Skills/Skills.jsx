@@ -1,14 +1,45 @@
 import "./Skills.css";
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import SoftwareSkills from "./SoftwareSkills";
 import MarketingSkills from "./MarketingSkills";
 import DesignSkills from "./DesignSkills";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 export default function Skills() {
-  const [selected, setSelected] = useState("software");
+  const [selected, setSelected] = useState("software"); // State to manage the selected skill category
+  const sectionRef = useRef(null); // Ref to keep track of the skills section
+  const [isVisible, setIsVisible] = useState(false); // State to manage visibility of the section for animation
+
+  // useEffect hook to set up the Intersection Observer
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          // If the section is in the viewport
+          setIsVisible(true); // Set visibility to true
+          observer.disconnect(); // Disconnect the observer once triggered
+        }
+      },
+      { threshold: 0.1 } // Trigger when 10% of the section is visible
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current); // Observe the section
+    }
+
+    // Clean up the observer on component unmount
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
 
   return (
-    <div className="skillsWrapper">
+    <div
+      ref={sectionRef}
+      className={`skillsWrapper ${isVisible ? "animate" : ""}`}
+    >
       <h1 className="skillsAndToolsWords">Skills & Tools</h1>
       <div className="para-container">
         <p className="forThoseThatKnow">
@@ -18,6 +49,7 @@ export default function Skills() {
 
       <div className="toggle-container">
         <div className="radio-block">
+          {/* Radio buttons to switch between skill categories */}
           <input
             type="radio"
             name="options"
@@ -49,9 +81,32 @@ export default function Skills() {
           <span className="selected" aria-hidden="true"></span>
         </div>
       </div>
-      {selected === "software" && <SoftwareSkills />}
-      {selected === "marketing" && <MarketingSkills />}
-      {selected === "design" && <DesignSkills />}
+      <div className="skills-container">
+        <TransitionGroup component={null}>
+          {/* Conditionally render skill sections with transition effects */}
+          {selected === "software" && (
+            <CSSTransition key="software" timeout={500} classNames="fade">
+              <div className="skill-section">
+                <SoftwareSkills />
+              </div>
+            </CSSTransition>
+          )}
+          {selected === "marketing" && (
+            <CSSTransition key="marketing" timeout={500} classNames="fade">
+              <div className="skill-section">
+                <MarketingSkills />
+              </div>
+            </CSSTransition>
+          )}
+          {selected === "design" && (
+            <CSSTransition key="design" timeout={500} classNames="fade">
+              <div className="skill-section">
+                <DesignSkills />
+              </div>
+            </CSSTransition>
+          )}
+        </TransitionGroup>
+      </div>
     </div>
   );
 }

@@ -1,52 +1,51 @@
-// software icons
+// src/assets/icons/index.js
+
 export const Icons = {
-  lightMode: "./src/assets/Icons/lightmode.png",
-  darkMode: "./src/assets/Icons/darkmode.png",
-  react: "./src/assets/Icons/react.svg",
-  vanillaJs: "./src/assets/Icons/javascript.svg",
-  nodeJs: "./src/assets/Icons/nodejs.svg",
-  nextJs: "./src/assets/Icons/nextJs.svg",
-  jsxIcon: "./src/assets/Icons/jsx_icon.svg",
-  mongoose: "./src/assets/Icons/mongooseJs.svg",
-  mongodb: "./src/assets/Icons/mongoDB.svg",
-  redux: "./src/assets/Icons/Redux.svg",
-  gatsby: "./src/assets/Icons/gatsby.svg",
-  express: "./src/assets/Icons/expressJs.svg",
-  sass: "./src/assets/Icons/sass.svg",
-  git: "./src/assets/Icons/Git.svg",
-  aws: "./src/assets/Icons/AWS.svg",
-  vercel: "./src/assets/Icons/Vercel.svg",
-};
-// web design icons
-export const designIcons = {
-  figma: "./src/assets/Icons/Figma.svg",
-  tailwind: "./src/assets/Icons/tailwind.svg",
-  bootstrap: "./src/assets/Icons/ReactBootstrap.svg",
-  html5: "./src/assets/Icons/HTML5.svg",
-  css3: "./src/assets/Icons/CSS3.svg",
-  accessibility: "./src/assets/Icons/accesibility.png",
-  uiUx: "./src/assets/Icons/uiUx.png",
-  photoshop: "./src/assets/Icons/Photoshop.svg",
-  canva: "./src/assets/Icons/Canva.svg",
-  userJourney: "./src/assets/Icons/journey.png",
-  wordpress: "./src/assets/Icons/Wordpress.svg",
-  ecommerce: "./src/assets/Icons/WooCommerce.svg",
-};
-// Marketing icons
-export const marketingIcons = {
-  seo: "./src/assets/Icons/Figma.svg",
-  sem: "./src/assets/Icons/tailwind.svg",
-  googleAds: "./src/assets/Icons/ReactBootstrap.svg",
-  socialMedia: "./src/assets/Icons/HTML5.svg",
-  userJourney: "./src/assets/Icons/CSS3.svg",
-  dataAnalysis: "./src/assets/Icons/accesibility.png",
-  content: "./src/assets/Icons/uiUx.png",
-  automation: "./src/assets/Icons/Photoshop.svg",
-  emailSMS: "./src/assets/Icons/Canva.svg",
+  lightMode: new URL("./lightmode.png", import.meta.url).href,
+  darkMode: new URL("./darkmode.png", import.meta.url).href,
+  react: new URL("./react.svg", import.meta.url).href,
+  vanillaJs: new URL("./javascript.svg", import.meta.url).href,
+  nodeJs: new URL("./nodejs.svg", import.meta.url).href,
+  nextJs: new URL("./nextJs.svg", import.meta.url).href,
+  jsxIcon: new URL("./jsx_icon.svg", import.meta.url).href,
+  mongoose: new URL("./mongooseJs.svg", import.meta.url).href,
+  mongodb: new URL("./mongoDB.svg", import.meta.url).href,
+  redux: new URL("./Redux.svg", import.meta.url).href,
+  gatsby: new URL("./gatsby.svg", import.meta.url).href,
+  express: new URL("./expressJs.svg", import.meta.url).href,
+  sass: new URL("./sass.svg", import.meta.url).href,
+  git: new URL("./Git.svg", import.meta.url).href,
+  aws: new URL("./AWS.svg", import.meta.url).href,
+  vercel: new URL("./Vercel.svg", import.meta.url).href,
 };
 
-// Capability Icons
+export const designIcons = {
+  figma: new URL("./Figma.svg", import.meta.url).href,
+  tailwind: new URL("./tailwind.svg", import.meta.url).href,
+  bootstrap: new URL("./ReactBootstrap.svg", import.meta.url).href,
+  html5: new URL("./HTML5.svg", import.meta.url).href,
+  css3: new URL("./CSS3.svg", import.meta.url).href,
+  accessibility: new URL("./accesibility.png", import.meta.url).href,
+  uiUx: new URL("./uiUx.png", import.meta.url).href,
+  photoshop: new URL("./Photoshop.svg", import.meta.url).href,
+  canva: new URL("./Canva.svg", import.meta.url).href,
+  userJourney: new URL("./journey.png", import.meta.url).href,
+  wordpress: new URL("./Wordpress.svg", import.meta.url).href,
+  ecommerce: new URL("./WooCommerce.svg", import.meta.url).href,
+};
+
+export const marketingIcons = {
+  seo: new URL("./Figma.svg", import.meta.url).href,
+  sem: new URL("./tailwind.svg", import.meta.url).href,
+  googleAds: new URL("./ReactBootstrap.svg", import.meta.url).href,
+  socialMedia: new URL("./HTML5.svg", import.meta.url).href,
+  userJourney: new URL("./CSS3.svg", import.meta.url).href,
+  dataAnalysis: new URL("./accesibility.png", import.meta.url).href,
+  content: new URL("./uiUx.png", import.meta.url).href,
+  automation: new URL("./Photoshop.svg", import.meta.url).href,
+  emailSMS: new URL("./Canva.svg", import.meta.url).href,
+};
 
 export const projectIcons = {
-  arrow_right: "./src/assets/Icons/arrow-right.png",
+  arrow_right: new URL("./arrow-right.png", import.meta.url).href,
 };
