@@ -19,6 +19,7 @@
   font-size: 24px;
   font-weight: 600;
   color: var(--secondary-text-color);
+  height: 87.3vh;
 }
 .hello {
   display: flex;
@@ -60,6 +61,7 @@
 .fullStackWebDeveloper {
   color: var(--primary-text-color);
   margin-bottom: 15px;
+  text-align: left;
 }
 
 .btnViewWork {
@@ -129,5 +131,9 @@
 
   .btnViewWork {
     flex-direction: column;
+  }
+
+  .fullStackWebDeveloper {
+    text-align: center;
   }
 }
