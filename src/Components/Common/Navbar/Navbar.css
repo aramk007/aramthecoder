@@ -1,6 +1,17 @@
 html {
   scroll-behavior: smooth;
 }
+@import url("../../App.css");
+@property --myColor1 {
+  syntax: "<color>";
+  initial-value: #1aa5ff;
+  inherits: false;
+}
+@property --myColor2 {
+  syntax: "<color>";
+  initial-value: #1a72ff;
+  inherits: false;
+}
 
 .navBar {
   display: flex;
@@ -34,4 +45,123 @@ html {
   display: flex;
   gap: 30px;
   align-items: center;
+}
+.hamburger-icon {
+  display: none;
+}
+
+.hamburger-menu {
+  position: absolute;
+  width: 100vw;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.viewWorkButton {
+  width: 167.61px;
+  height: 51.98px;
+  padding: 0px 15px;
+  border-radius: 30px;
+  border: none;
+  color: white;
+  font-size: 18px;
+  font-family: sofia-pro, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
+  font-optical-sizing: auto;
+  font-weight: 700;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.26);
+  background: linear-gradient(90deg, var(--myColor1), var(--myColor2));
+  transition: --myColor1 0.3s, --myColor2 0.3s;
+  cursor: pointer;
+}
+
+.viewWorkButton:hover {
+  --myColor2: #1aa5ff;
+  --myColor1: #1a72ff;
+}
+
+.pulse {
+  background-color: #0062ff;
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 3px;
+  margin-left: 6px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-clip: padding-box;
+  box-shadow: 0 0 0 rgba(0, 98, 255, 0.4);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 98, 255, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(0, 98, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 98, 255, 0);
+  }
+}
+
+.nav-footer {
+  height: 50px;
+  background-color: rgb(221, 221, 221);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  bottom: 0%;
+  width: 100vw;
+  padding-right: 20px;
+}
+
+.nav-footer p {
+  color: rgba(0, 98, 255);
+  font-weight: 500;
+  font-size: 16px;
+}
+@media screen and (max-width: 450px) {
+  .hamburger-icon {
+    display: block;
+    width: 30px;
+  }
+
+  .side-nav-container {
+    display: none;
+  }
+
+  .hamburger-menu {
+    background-color: white;
+    height: 80vh;
+    padding-bottom: 20px;
+  }
+
+  .navLinks-responsive {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navItems {
+    font-size: 22px;
+  }
+
+  .switch {
+    margin-top: 18px;
+    text-align: center;
+    padding-left: 0px;
+  }
 }
