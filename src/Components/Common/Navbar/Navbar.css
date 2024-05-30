@@ -115,7 +115,7 @@ html {
 }
 
 .nav-footer {
-  height: 50px;
+  height: 80px;
   background-color: rgb(221, 221, 221);
   display: flex;
   justify-content: flex-end;
