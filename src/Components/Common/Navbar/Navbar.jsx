@@ -47,9 +47,9 @@ export default function Navbar({ isDark, toggleTheme }) {
             <a href="#projects" className="navItems">
               Projects
             </a>
-            <Link to="/capabilities" className="navItems">
+            <a href="#capabilities" className="navItems">
               Capabilities
-            </Link>
+            </a>
             <Link to="/contact" className="navItems">
               Contact
             </Link>
@@ -109,7 +109,7 @@ export default function Navbar({ isDark, toggleTheme }) {
             Projects
           </a>
           <a
-            to="#capabilities"
+            href="#capabilities"
             className="navItems fadeIn"
             onClick={closeMenuWithDelay}
           >
