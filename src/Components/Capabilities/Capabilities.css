@@ -1,26 +1,55 @@
+@import url(../../App.css);
+
 .Capabilities--Wrapper {
   display: flex;
+  gap: 20px;
   justify-content: space-around;
-}
-.Capabilities--Left--Container {
-  margin-top: 4%;
+  flex-wrap: wrap;
 }
 
-.Capabilities--Center--Container {
-  margin-top: 4%;
-}
+.Capabilities--Left--Container,
+.Capabilities--Center--Container,
 .Capabilities--Right--Container {
   margin-top: 4%;
+  list-style: none;
+  line-height: 30px;
+  word-spacing: 2px;
+  opacity: 0; /* Initial state */
+  transform: translateY(20px); /* Initial state */
+  transition: opacity 1s ease-out, transform 1s ease-out; /* Transition */
 }
+
+.Capabilities--Left--Container.animate,
+.Capabilities--Center--Container.animate,
+.Capabilities--Right--Container.animate {
+  opacity: 1; /* Visible state */
+  transform: translateY(0); /* Visible state */
+}
+
 h1 {
   text-align: center;
-
   font-size: 36px;
   color: var(--primary-text-color);
 }
+
 .headings {
   text-align: center;
   font-weight: 700;
   font-size: 24px;
   color: var(--primary-text-color);
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+li {
+  color: var(--secondary-text-color);
+  font-weight: 600;
+  font-size: 16px;
+  filter: contrast(50%);
+  text-align: center;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
 }

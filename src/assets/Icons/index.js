@@ -32,6 +32,10 @@ export const designIcons = {
   userJourney: new URL("./journey.png", import.meta.url).href,
   wordpress: new URL("./WordPress.svg", import.meta.url).href,
   ecommerce: new URL("./WooCommerce.svg", import.meta.url).href,
+  paint: new URL("./paint.png", import.meta.url).href,
+  heart: new URL("./heart.png", import.meta.url).href,
+  rocket: new URL("./rocket.png", import.meta.url).href,
+  developer: new URL("./developer.png", import.meta.url).href,
 };
 
 export const marketingIcons = {
