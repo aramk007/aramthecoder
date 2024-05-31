@@ -110,9 +110,32 @@
   color: rgb(66, 52, 255);
 }
 
+.mobile-pic-continer {
+  text-align: center;
+  display: none;
+}
+
+.mobile-pic-continer img {
+  width: 150px;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.26);
+  border-radius: 150px;
+}
+
+.dark-img {
+  border: 3px solid #1a87ff;
+}
+
 @media screen and (max-width: 440px) {
   .hero__right-side {
     display: none;
+  }
+
+  .mobile-pic-continer {
+    display: block;
+  }
+
+  .hero {
+    padding: 0px 20px;
   }
 
   .hero__left-side {
@@ -127,6 +150,7 @@
 
   .aboutMe {
     font-size: 18px;
+    display: none;
   }
 
   .btnViewWork {
@@ -135,5 +159,16 @@
 
   .fullStackWebDeveloper {
     text-align: center;
+  }
+
+  .hero__left-side {
+    display: flex;
+
+    justify-content: space-around;
+    height: 100%;
+  }
+
+  .extra-text {
+    display: none;
   }
 }
