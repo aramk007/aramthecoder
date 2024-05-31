@@ -26,7 +26,7 @@ export const projects = [
   },
 
   {
-    name: "Pasific Dealership Services",
+    name: "Pacific Dealership Services",
     image: images.dealership,
     url: "",
     description: "",
