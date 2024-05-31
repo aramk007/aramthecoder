@@ -1,9 +1,39 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./Footer.css";
 
 export default function Footer() {
+  const footerRef = useRef(null);
+
+  // Function to handle intersection observer callback
+  const handleIntersection = (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      } else {
+        entry.target.classList.remove("visible");
+      }
+    });
+  };
+
+  // useEffect hook to setup the intersection observer
+  useEffect(() => {
+    const observer = new IntersectionObserver(handleIntersection, {
+      threshold: 0.1, // Trigger when 10% of the element is in view
+    });
+
+    if (footerRef.current) {
+      observer.observe(footerRef.current);
+    }
+
+    return () => {
+      if (footerRef.current) {
+        observer.unobserve(footerRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <div className="footerContainer">
+    <div className="footerContainer" ref={footerRef}>
       <div className="footerLeft">
         <p className="aram">Aram The Coder</p>
       </div>
