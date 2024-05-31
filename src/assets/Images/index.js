@@ -8,4 +8,17 @@ export const images = {
   dealership: new URL("./portfolio-dealership.png", import.meta.url).href,
   kitchen: new URL("./portfolio-kitchen.png", import.meta.url).href,
   restraunts: new URL("./portfolio-restaurant.png", import.meta.url).href,
+
+  darkModeBlueBg: new URL(
+    "./AramWebPics/LightMode/white-blue.png",
+    import.meta.url
+  ).href,
+  lightModeImage: new URL(
+    "./AramWebPics/LightMode/light-blue.png",
+    import.meta.url
+  ).href,
+  darkModeBlueImage: new URL(
+    "./AramWebPics/DarkMode/dark-blue.png",
+    import.meta.url
+  ).href,
 };

@@ -210,11 +210,21 @@ html {
     padding-left: 0px;
   }
 
-  .hamburger-menu {
-    height: 90vh; /* Adjusted height to keep footer visible */
-  }
-
   .nav-footer {
     height: 10vh; /* Ensure footer takes the remaining space */
+  }
+
+  nav {
+    position: fixed !important;
+    width: 100vw !important;
+    background-color: rgba(255, 255, 255, 0.9) !important;
+  }
+
+  .logo {
+    width: 60px;
+  }
+
+  .hamburger-icon img {
+    width: 30px !important;
   }
 }
