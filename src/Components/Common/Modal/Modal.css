@@ -18,19 +18,22 @@
 
 /* Modal content styling */
 .modal-content {
+  width: auto !important;
+  height: 80vh !important;
+  margin-top: 10vh !important;
+  margin-bottom: 10vh !important;
   background-color: #ffffffef; /* Background color for the modal content */
-  padding: 20px; /* Padding inside the modal content */
+  padding-bottom: 6vh !important; /* Padding inside the modal content */
   border-radius: 8px; /* Rounded corners for the modal content */
   position: relative; /* Position relative to allow positioning of child elements */
   display: flex; /* Use flexbox for layout */
   flex-direction: column; /* Arrange children in a column */
-  justify-content: space-between; /* Space out children with space between */
-  height: 100%; /* Make content height 100% of the container */
+  justify-content: space-around; /* Space out children with space between */
 }
 
 /* Modal container styling */
 .modal-container {
-  width: 60vw; /* Width of the modal container (65% of viewport width) */
+  width: 70vw; /* Width of the modal container (65% of viewport width) */
   height: 70vh; /* Height of the modal container (70% of viewport height) */
   display: flex; /* Use flexbox for layout */
   flex-direction: column; /* Arrange children in a column */
@@ -66,8 +69,9 @@
 /* Video placeholder styling */
 .video-placeholder {
   width: 100%; /* Full width of the container */
+  max-height: 570px;
   flex: 1; /* Allow the video to take up remaining space */
-  margin-top: 15px; /* Margin at the top */
+  margin-top: 10px; /* Margin at the top */
   background: #000; /* Black background */
   position: relative; /* Position relative to allow positioning of child elements */
 }
@@ -134,4 +138,44 @@
     var(--myColor2),
     var(--myColor1)
   ); /* Gradient background on hover */
+}
+@media screen and (min-device-width: 1001px) and (max-device-width: 1200px) {
+  .video-placeholder {
+    max-height: 35vh;
+  }
+  .modal-content {
+    height: 35vh !important;
+    margin-bottom: 45vh !important;
+    padding-bottom: 620px !important;
+  }
+  .modal-container {
+    width: 96vw;
+  }
+}
+@media screen and (min-device-width: 751px) and (max-device-width: 1000px) {
+  .video-placeholder {
+    max-height: 35vh;
+  }
+  .modal-content {
+    height: 35vh !important;
+    margin-bottom: 38vh !important;
+    padding-bottom: 560px !important;
+  }
+  .modal-container {
+    width: 96vw;
+
+    margin-bottom: 15vh !important;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .video-placeholder {
+    max-height: 40vh;
+  }
+  .modal-content {
+    height: 60vh !important;
+    padding-top: 5vh;
+  }
+  .modal-container {
+    width: 98vw;
+  }
 }
