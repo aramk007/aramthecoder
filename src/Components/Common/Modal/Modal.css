@@ -139,13 +139,13 @@
     var(--myColor1)
   ); /* Gradient background on hover */
 }
-@media screen and (min-device-width: 1001px) and (max-device-width: 1200px) {
+@media screen and (min-device-width: 1001px) and (max-device-width: 1025px) {
   .video-placeholder {
     max-height: 35vh;
   }
   .modal-content {
     height: 35vh !important;
-    margin-bottom: 45vh !important;
+    margin-bottom: 35vh !important;
     padding-bottom: 620px !important;
   }
   .modal-container {
@@ -158,7 +158,7 @@
   }
   .modal-content {
     height: 35vh !important;
-    margin-bottom: 38vh !important;
+    margin-bottom: 20vh !important;
     padding-bottom: 560px !important;
   }
   .modal-container {
