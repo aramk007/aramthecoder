@@ -1,21 +1,3 @@
-/* Modal overlay styling */
-.modal-overlay {
-  background-color: rgba(
-    51,
-    51,
-    51,
-    0.42
-  ); /* Semi-transparent black for dimming background */
-  position: fixed; /* Fixed position to cover the entire screen */
-  top: 0; /* Position at the top */
-  left: 0; /* Position at the left */
-  right: 0; /* Position at the right */
-  bottom: 0; /* Position at the bottom */
-  display: flex; /* Use flexbox for centering content */
-  align-items: center; /* Vertically center content */
-  justify-content: center; /* Horizontally center content */
-}
-
 /* Modal content styling */
 .modal-content {
   width: auto !important;
@@ -172,10 +154,15 @@
     max-height: 40vh;
   }
   .modal-content {
-    height: 60vh !important;
+    min-height: 60vh !important;
     padding-top: 5vh;
+    margin-bottom: 10px !important;
   }
   .modal-container {
     width: 98vw;
+  }
+
+  .project-name-heading {
+    font-size: 25px;
   }
 }

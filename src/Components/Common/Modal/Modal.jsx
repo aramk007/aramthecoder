@@ -130,7 +130,7 @@ export default function CustomModal({ modalIsOpen, setIsOpen, project }) {
                 {/* Container for the modal content */}
                 <div className="modal-container">
                   {/* Project title */}
-                  <h1>{project.name}</h1>
+                  <h1 className="project-name-heading">{project.name}</h1>
                   {/* Video player with custom controls */}
                   <div className="video-placeholder">
                     <video ref={videoRef} width="100%" height="100%">
