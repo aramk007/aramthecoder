@@ -112,12 +112,6 @@ export default function CustomModal({ modalIsOpen, setIsOpen, project }) {
               {/* Animated content container using framer-motion */}
               <motion.div
                 className="modal-content"
-                style={{
-                  width: "70vw",
-                  height: "70vh",
-                  marginTop: "15vh",
-                  marginBottom: "15vh",
-                }}
                 initial={{ scale: 0.1, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.1, opacity: 0 }}
