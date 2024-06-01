@@ -154,15 +154,23 @@
     max-height: 40vh;
   }
   .modal-content {
-    min-height: 60vh !important;
-    padding-top: 5vh;
+    height: 55vh !important;
+    padding-bottom: 0px !important;
     margin-bottom: 10px !important;
   }
   .modal-container {
     width: 98vw;
+    height: 40vh !important;
   }
 
   .project-name-heading {
     font-size: 25px;
+  }
+  .button-group {
+    padding-bottom: 0px;
+  }
+
+  .modal-container {
+    justify-content: center;
   }
 }
