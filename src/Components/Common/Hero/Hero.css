@@ -34,13 +34,40 @@
 .hero__left-side {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   width: 40%;
   margin-left: 10px;
 }
 
 .emoji {
   width: 40px;
+  animation: wave 2s infinite;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 .hero__left-side img,
@@ -51,7 +78,6 @@
 }
 .hero__right-side {
   width: 45%;
-  /* margin-left: 15px; */
 }
 
 .hero__content {
@@ -115,6 +141,7 @@
   display: none;
 }
 
+/* pulse animation */
 .mobile-pic-continer img {
   width: 150px;
   box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.26);
@@ -150,7 +177,7 @@
 
   .hero {
     height: 100vh;
-    padding-top: 110px;
+    padding-top: 100px;
   }
 
   .hero__left-side {
@@ -161,6 +188,7 @@
   .hello {
     text-align: center;
     justify-content: center;
+    margin-bottom: -10px; /* Adjusted margin */
   }
 
   .aboutMe {
@@ -173,14 +201,40 @@
 
   .fullStackWebDeveloper {
     text-align: center;
+    margin-bottom: -10px; /* Adjusted margin */
   }
 
   .hero__left-side {
     display: flex;
-
     justify-content: flex-start;
     height: 100%;
     gap: 30px;
+  }
+  .hero-description-container {
+    margin-bottom: -5px; /* Adjusted margin */
+  }
+}
+
+@media screen and (max-height: 667px) {
+  .hero {
+    height: 100vh;
+  }
+
+  .hello {
+    margin-bottom: -15px; /* Adjusted margin */
+  }
+
+  .fullStackWebDeveloper {
+    margin-bottom: -15px; /* Adjusted margin */
+  }
+
+  .hero-description-container {
+    margin-bottom: -15px; /* Adjusted margin */
+  }
+
+  .btnViewWork {
+    gap: 10px; /* Reduced gap */
+    padding: 10px 0;
   }
 }
 
