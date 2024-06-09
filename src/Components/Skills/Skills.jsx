@@ -47,8 +47,15 @@ export default function Skills() {
         </p>
       </div>
 
-      <div className="toggle-container">
+      <div
+        className="toggle-container"
+        role="radiogroup"
+        aria-labelledby="skills-category-label"
+      >
         <div className="radio-block">
+          <legend id="skills-category-label" className="sr-only">
+            Select a skills category
+          </legend>
           {/* Radio buttons to switch between skill categories */}
           <input
             type="radio"
@@ -57,8 +64,11 @@ export default function Skills() {
             value="software"
             checked={selected === "software"}
             onChange={() => setSelected("software")}
+            aria-labelledby="label-option-one"
           />
-          <label htmlFor="option-one">Software</label>
+          <label id="label-option-one" htmlFor="option-one">
+            Software
+          </label>
           <input
             type="radio"
             name="options"
@@ -66,8 +76,11 @@ export default function Skills() {
             value="design"
             checked={selected === "design"}
             onChange={() => setSelected("design")}
+            aria-labelledby="label-option-three"
           />
-          <label htmlFor="option-three">Web Design</label>
+          <label id="label-option-three" htmlFor="option-three">
+            Web Design
+          </label>
           <input
             type="radio"
             name="options"
@@ -75,8 +88,11 @@ export default function Skills() {
             value="marketing"
             checked={selected === "marketing"}
             onChange={() => setSelected("marketing")}
+            aria-labelledby="label-option-two"
           />
-          <label htmlFor="option-two">Marketing</label>
+          <label id="label-option-two" htmlFor="option-two">
+            Marketing
+          </label>
 
           <span className="selected" aria-hidden="true"></span>
         </div>
@@ -86,21 +102,42 @@ export default function Skills() {
           {/* Conditionally render skill sections with transition effects */}
           {selected === "software" && (
             <CSSTransition key="software" timeout={500} classNames="fade">
-              <div className="skill-section">
+              <div
+                className="skill-section"
+                role="region"
+                aria-labelledby="software-skills"
+              >
+                <h2 id="software-skills" className="sr-only">
+                  Software Skills
+                </h2>
                 <SoftwareSkills />
               </div>
             </CSSTransition>
           )}
           {selected === "marketing" && (
             <CSSTransition key="marketing" timeout={500} classNames="fade">
-              <div className="skill-section">
+              <div
+                className="skill-section"
+                role="region"
+                aria-labelledby="marketing-skills"
+              >
+                <h2 id="marketing-skills" className="sr-only">
+                  Marketing Skills
+                </h2>
                 <MarketingSkills />
               </div>
             </CSSTransition>
           )}
           {selected === "design" && (
             <CSSTransition key="design" timeout={500} classNames="fade">
-              <div className="skill-section">
+              <div
+                className="skill-section"
+                role="region"
+                aria-labelledby="design-skills"
+              >
+                <h2 id="design-skills" className="sr-only">
+                  Design Skills
+                </h2>
                 <DesignSkills />
               </div>
             </CSSTransition>
