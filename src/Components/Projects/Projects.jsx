@@ -76,7 +76,7 @@ export default function Projects() {
               </div>
               <div className="project-button">
                 <p>{item.name}</p>
-                <button>
+                <button onClick={() => openModal(item)}>
                   <img src={projectIcons.arrow_right} alt="arrow right" />
                 </button>
               </div>
@@ -107,7 +107,7 @@ export default function Projects() {
               </div>
               <div className="project-button">
                 <p>{item.name}</p>
-                <button>
+                <button onClick={() => openModal(item)}>
                   <img src={projectIcons.arrow_right} alt="arrow right" />
                 </button>
               </div>
