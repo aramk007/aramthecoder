@@ -21,6 +21,15 @@ export default function Hero() {
     };
   }, []);
 
+  // onClick handler to scroll to proper #id
+  const handleScroll = (event, targetId) => {
+    event.preventDefault();
+    const targetElement = document.querySelector(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -54,10 +63,10 @@ export default function Hero() {
                 <img
                   src={images.darkModeBlueBg}
                   className="dark-img"
-                  alt="bg"
+                  alt="Dark mode background"
                 />
               ) : (
-                <img src={images.lightModeImage} alt="bg" />
+                <img src={images.lightModeImage} alt="Light mode background" />
               )}
             </div>
             <motion.div variants={itemVariants}>
@@ -80,7 +89,7 @@ export default function Hero() {
               className="hero-description-container"
             >
               <p>
-                I create user-centric web & Mobile applications that drive
+                I create user-centric web & mobile applications that drive
                 conversions.
                 <span className="extra-text">
                   {" "}
@@ -89,10 +98,21 @@ export default function Hero() {
               </p>
             </motion.div>
             <motion.div variants={itemVariants} className="btnViewWork">
-              <button className="viewWorkButton">View My Work</button>
-              <Link className="aboutMe" to="/">
+              <button
+                className="viewWorkButton"
+                onClick={(e) => handleScroll(e, "#projects")}
+                aria-label="View My Work"
+              >
+                View My Work
+              </button>
+              <a
+                href="#capabilities"
+                className="aboutMe"
+                onClick={(e) => handleScroll(e, "#capabilities")}
+                aria-label="More About Me"
+              >
                 More About Me
-              </Link>
+              </a>
             </motion.div>
           </motion.div>
 
